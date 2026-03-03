@@ -1,0 +1,3 @@
+enum BomboomBombAnims {
+	BOMBOOM_BOMB_ANIM_BOMBOOM_BOMB_ANIM_SPIN,
+};

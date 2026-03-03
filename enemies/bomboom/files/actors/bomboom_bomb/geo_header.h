@@ -1,0 +1,14 @@
+extern const GeoLayout bomboom_bomb_geo[];
+extern Vtx bomboom_bomb_body_mesh_layer_1_vtx_0[90];
+extern Gfx bomboom_bomb_body_mesh_layer_1_tri_0[];
+extern Vtx bomboom_bomb_body_mesh_layer_1_vtx_1[53];
+extern Gfx bomboom_bomb_body_mesh_layer_1_tri_1[];
+extern Vtx bomboom_bomb_body_mesh_layer_1_vtx_2[80];
+extern Gfx bomboom_bomb_body_mesh_layer_1_tri_2[];
+extern Gfx mat_bomboom_bomb_Bomboom_bomb_shell[];
+extern Gfx mat_revert_bomboom_bomb_Bomboom_bomb_shell[];
+extern Gfx mat_bomboom_bomb_Bomboom_bomb_metal[];
+extern Gfx mat_revert_bomboom_bomb_Bomboom_bomb_metal[];
+extern Gfx mat_bomboom_bomb_Bomboom_bomb_fuze[];
+extern Gfx mat_revert_bomboom_bomb_Bomboom_bomb_fuze[];
+extern Gfx bomboom_bomb_body_mesh_layer_1_with_revert[];
