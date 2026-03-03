@@ -25,6 +25,7 @@ const BehaviorScript bhvDeceit[] = {
     OR_INT(oFlags, OBJ_FLAG_MOVE_Y_WITH_TERMINAL_VEL | OBJ_FLAG_MOVE_XZ_USING_FVEL | OBJ_FLAG_COMPUTE_ANGLE_TO_MARIO | OBJ_FLAG_COMPUTE_DIST_TO_MARIO | OBJ_FLAG_SET_FACE_YAW_TO_MOVE_YAW | OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
     SET_OBJ_PHYSICS(/*Wall hitbox radius*/ 60, /*Gravity*/ -400, /*Bounciness*/ 0, /*Drag strength*/ 1000, /*Friction*/ 1000, /*Buoyancy*/ 0, /*Unused*/ 0, 0),
     LOAD_ANIMATIONS(oAnimations, deceit_anims),
+    SET_FLOAT(oDrawingDistance, 10000),
     CALL_NATIVE(deceit_init),
     BEGIN_LOOP(),
         CALL_NATIVE(deceit_loop),
@@ -89,3 +90,4 @@ in 'actors/YourGroup.h' paste the following:
 #include "deceit/anim_header.h"
 ```
 _________________________________________________________________________________________________________________________
+
