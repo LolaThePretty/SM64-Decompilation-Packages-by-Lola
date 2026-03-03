@@ -1,3 +1,24 @@
+static struct ObjectHitbox sBomboomBombHitbox = {
+    /* interactType:      */ INTERACT_DAMAGE,
+    /* downOffset:        */ 0,
+    /* damageOrCoinValue: */ 2,
+    /* health:            */ 0,
+    /* numLootCoins:      */ 0,
+    /* radius:            */ 30,
+    /* height:            */ 30,
+    /* hurtboxRadius:     */ 30,
+    /* hurtboxHeight:     */ 30,
+};
+
+static u8 sBomboomBombAttackHandlers[] = {
+    /* ATTACK_PUNCH:                 */ ATTACK_HANDLER_NOP,
+    /* ATTACK_KICK_OR_TRIP:          */ ATTACK_HANDLER_NOP,
+    /* ATTACK_FROM_ABOVE:            */ ATTACK_HANDLER_NOP,
+    /* ATTACK_GROUND_POUND_OR_TWIRL: */ ATTACK_HANDLER_NOP,
+    /* ATTACK_FAST_ATTACK:           */ ATTACK_HANDLER_NOP,
+    /* ATTACK_FROM_BELOW:            */ ATTACK_HANDLER_NOP,
+};
+
 Gfx *bomboom_bomb_color(s32 callContext, UNUSED struct GraphNode *node) {
     struct Object *curObj;
     Gfx *dlStart, *dlHead;
@@ -25,6 +46,7 @@ void bomboom_bomb_init(void) {
     o->oBomboomBombCurrentColor = 255;
     o->oBomboomBombSpeed = random_float() + 0.2;
     o->oForwardVel = o->oBomboomBombSpeed * 35;
+    cur_obj_play_sound_2(SOUND_AIR_BOBOMB_LIT_FUSE);
 }
 
 void bomboom_bomb_loop(void) {
@@ -37,8 +59,6 @@ void bomboom_bomb_loop(void) {
                     else {o->oBomboomBombTargetColor = 255;}
                     o->oBomboomBombColorTimer = 0;
                 }
-                cur_obj_play_sound_1(SOUND_AIR_BOBOMB_LIT_FUSE);
-                spawn_object(o, MODEL_SMOKE, bhvBobombFuseSmoke);
             }
 
             if ((o->oBomboomBombTimer >= 140) || (o->oDistanceToMario < 30)) {
@@ -47,9 +67,13 @@ void bomboom_bomb_loop(void) {
         break;
 
         case 1: // Explode, boom ! :D
-            spawn_object(o, MODEL_EXPLOSION, bhvExplosion);
+            cur_obj_play_sound_1(SOUND_GENERAL2_BOBOMB_EXPLOSION);
             obj_mark_for_deletion(o);
         break;
+    }
+
+    if (obj_handle_attacks(&sBomboomBombHitbox, o->oAction, sBomboomBombAttackHandlers)) {
+        o->oBomboomBombTimer = 150;
     }
     
     o->oBomboomBombTimer += 1;
@@ -129,7 +153,8 @@ void bomboom_loop(void) {
         o->oAction = 2;
     }
     
-    spawn_object_relative(0, 0, 10, -100, o, MODEL_SMOKE, bhvBobombFuseSmoke);
-    
+    cur_obj_move_standard(78);
+    cur_obj_update_floor_and_walls();
+    obj_bounce_off_walls_edges_objects(&o->oMoveAngleYaw);
 
 }
