@@ -1,0 +1,14 @@
+extern const GeoLayout block_swap_switch_geo_opt_1[];
+extern const GeoLayout block_swap_switch_geo[];
+extern u8 block_swap_switch_BlockSwapButtonOff_ci4[];
+extern u8 block_swap_switch_BlockSwapButtonOff_pal_rgba16[];
+extern u8 block_swap_switch_BlockSwapButtonOn_ci4[];
+extern u8 block_swap_switch_BlockSwapButtonOn_pal_rgba16[];
+extern Vtx block_swap_switch_body_mesh_layer_1_vtx_0[56];
+extern Gfx block_swap_switch_body_mesh_layer_1_tri_0[];
+extern Gfx mat_block_swap_switch_BlockSwapOff[];
+extern Gfx mat_revert_block_swap_switch_BlockSwapOff[];
+extern Gfx mat_block_swap_switch_BlockSwapOn[];
+extern Gfx mat_revert_block_swap_switch_BlockSwapOn[];
+extern Gfx block_swap_switch_body_mesh_layer_1_with_revert[];
+extern Gfx block_swap_switch_body_mesh_layer_1_opt_1_with_revert[];
