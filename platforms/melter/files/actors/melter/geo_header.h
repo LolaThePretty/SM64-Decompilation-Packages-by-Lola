@@ -1,0 +1,17 @@
+extern const GeoLayout melter_geo[];
+extern u8 melter_ArrowEnd_i8[];
+extern u8 melter_Fire_rgba32[];
+extern Vtx melter_root_mesh_layer_1_vtx_0[170];
+extern Gfx melter_root_mesh_layer_1_tri_0[];
+extern Vtx melter_flame_mesh_layer_5_vtx_0[297];
+extern Gfx melter_flame_mesh_layer_5_tri_0[];
+extern Vtx melter_flame_mesh_layer_5_vtx_1[134];
+extern Gfx melter_flame_mesh_layer_5_tri_1[];
+extern Gfx mat_melter_melter_base_mat[];
+extern Gfx mat_revert_melter_melter_base_mat[];
+extern Gfx mat_melter_melter_flame_mat[];
+extern Gfx mat_revert_melter_melter_flame_mat[];
+extern Gfx mat_melter_melter_flame_invert_mat[];
+extern Gfx mat_revert_melter_melter_flame_invert_mat[];
+extern Gfx melter_root_mesh_layer_1_with_revert[];
+extern Gfx melter_flame_mesh_layer_5_with_revert[];

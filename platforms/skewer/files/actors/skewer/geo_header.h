@@ -1,0 +1,11 @@
+extern const GeoLayout skewer_geo[];
+extern u8 skewer_ArrowEnd_i8[];
+extern Vtx skewer_root_mesh_layer_1_vtx_0[120];
+extern Gfx skewer_root_mesh_layer_1_tri_0[];
+extern Vtx skewer_root_mesh_layer_1_vtx_1[733];
+extern Gfx skewer_root_mesh_layer_1_tri_1[];
+extern Gfx mat_skewer_skewer_mat[];
+extern Gfx mat_revert_skewer_skewer_mat[];
+extern Gfx mat_skewer_skewer_spike_mat[];
+extern Gfx mat_revert_skewer_skewer_spike_mat[];
+extern Gfx skewer_root_mesh_layer_1_with_revert[];

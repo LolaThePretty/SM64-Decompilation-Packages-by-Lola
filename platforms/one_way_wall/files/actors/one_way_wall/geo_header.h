@@ -1,0 +1,16 @@
+extern const GeoLayout one_way_wall_geo[];
+extern u8 one_way_wall_Bone_ci8[];
+extern u8 one_way_wall_Bone_pal_rgba16[];
+extern Vtx one_way_wall_root_mesh_layer_5_vtx_0[80];
+extern Gfx one_way_wall_root_mesh_layer_5_tri_0[];
+extern Vtx one_way_wall_arrow_1_mesh_layer_5_vtx_0[67];
+extern Gfx one_way_wall_arrow_1_mesh_layer_5_tri_0[];
+extern Vtx one_way_wall_arrow_2_mesh_layer_5_vtx_0[67];
+extern Gfx one_way_wall_arrow_2_mesh_layer_5_tri_0[];
+extern Gfx mat_one_way_wall_one_way_wall_wall[];
+extern Gfx mat_revert_one_way_wall_one_way_wall_wall[];
+extern Gfx mat_one_way_wall_one_way_wall_arrow_layer5[];
+extern Gfx mat_revert_one_way_wall_one_way_wall_arrow_layer5[];
+extern Gfx one_way_wall_root_mesh_layer_5[];
+extern Gfx one_way_wall_arrow_1_mesh_layer_5[];
+extern Gfx one_way_wall_arrow_2_mesh_layer_5_with_revert[];
